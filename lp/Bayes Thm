@@ -1,0 +1,9 @@
+library(e1071)
+?naiveBayes
+data=iris
+test_data=data.frame(Sepal.length=5.9, Sepal.width=3.0,Petal.Length=5.1, Petal.Width=1.8)
+test_data
+model=naiveBayes(Species~.,data=data,laplace=1)
+model
+test_data=test_data[,-5]
+predict(model, test_data)
