@@ -1,0 +1,8 @@
+install.packages("aTSA")
+library(aTSA)
+?lp.assign
+cost_matr=matrix(c(15,13,14,17,11,12,15,13,18,12,10,11,15,17,14,16),nrow=4, byrow=TRUE)
+model=lp.assign(cost_matr,direction='min')
+model$objval
+
+data()
